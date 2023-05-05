@@ -52,13 +52,13 @@ const router = createBrowserRouter([
       /*  {
          path: '/',
          element: <Category></Category>,
-         loader:()=>fetch(`http://localhost:5005/news`)
+         loader:()=>fetch(`https://the-dragoon-server-soriful15.vercel.app/news`)
        }, */
       {
         // path: '/category/:id',
         path: ':id',
         element: <Category></Category>,
-        loader: ({ params }) => fetch(`http://localhost:5005/categories/${params.id}`)
+        loader: ({ params }) => fetch(`https://the-dragoon-server-soriful15.vercel.app/categories/${params.id}`)
       },
 
     ]
@@ -71,7 +71,7 @@ const router = createBrowserRouter([
       {
         path: ':id',
         element: <PrivateRoute><News></News></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5005/news/${params.id}`)
+        loader: ({ params }) => fetch(`https://the-dragoon-server-soriful15.vercel.app/news/${params.id}`)
       },
 
     ]
