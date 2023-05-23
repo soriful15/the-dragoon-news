@@ -6,10 +6,11 @@ import { FaUserCircle } from 'react-icons/fa';
 
 import { useContext } from 'react';
 import { AuthContext } from '../../../Providers/AuthProviders';
+import UseTitle from '../../../Hooks/useTitile';
 const NavigationNavBar = () => {
     const { user, loggedOut } = useContext(AuthContext)
 
-
+    UseTitle('Home')
     const handleLogOut = () => {
         loggedOut()
             .then()

@@ -3,10 +3,11 @@ import { Button, Card } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import EditorInsights from '../EditorInsights/EditorInsights';
+import UseTitle from '../../../Hooks/useTitile';
 const News = () => {
     const news=useLoaderData()
     console.log(news)
-
+UseTitle('News Details')
     const {image_url,details,title,category_id}=news
     return (
         <>
